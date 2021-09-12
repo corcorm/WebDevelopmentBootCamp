@@ -1,6 +1,5 @@
 /*
 Youtube video link: https://www.youtube.com/watch?v=Fk12ELJ9Bww
-testing
 
 Step 1 : Install git on your system
 
@@ -24,4 +23,9 @@ Step 9 : Check changes on github repo
 
 if the error msg "SOURCE CONTROL: No source control providers registered" appears, just open a folder in the explorer view that was already under git control and the option will appear
 check if this helps https://stackoverflow.com/questions/4...
+
+Clone the repository when using a different computer
+
+If for some reason git is not working ensure that Git is enabled and within the builtin apps - if not just delete VSC and Git and start over
+
 */

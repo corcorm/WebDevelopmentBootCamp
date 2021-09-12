@@ -1,0 +1,161 @@
+<!--Shortcuts-->
+<!DOCTYPE html>
+<html>
+
+    <style>
+        #body {
+            background-image: linear-gradient(to right, #13294B, #7BAFD4);
+            color: white;
+            font-size: 15px;
+            padding: 20px;
+        }
+    
+        #googleSearch {
+            padding: 20px;
+        }
+    
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            background-color: Transparent;
+        }
+    
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 25px;
+            color: white;
+        }
+    
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #7BAFD4;
+        }
+    
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #7BAFD4;
+        }
+    
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 10px 10px;
+            border-top: none;
+        }
+    
+        table {
+            border-collapse: collapse;
+        }
+    
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            color: black;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+    
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    </style>
+
+<body id="body" sytle="background-color:#4B9CD">
+
+    <h1>Michael Corcoran's Portfolio</h1>
+
+
+    <!--Google Search-->
+    <form id="googleSearch" action="http://www.google.com/search" method="get">
+        Google Search: <input type="text" name="q">
+    </form>
+
+
+    <!--This is the construction of the tab buttons - having them withing the same Div aligns them in a tab format-->
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Tab1')">Streaming</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')">School</button>
+    </div>
+    </div>
+    <!--This is what will be inside the tab1 - I am putting it in a div class to reference in the JavaScirpt code-->
+    <div id="Tab1" class="tabcontent">
+        <h2>Streaming Links</h2>
+        <table border="5" style="width:100%">
+            <tr>
+                <th>Website:</th>
+                <th>Link:</th>
+            </tr>
+            <tr>
+                <td>Netflix</td>
+                <td><a href="https://www.netflix.com/browse">https://www.netflix.com/browse</a></td>
+            </tr>
+            <tr>
+                <td>BuzzFeed</td>
+                <td><a href="https://www.buzzfeed.com/">https://www.buzzfeed.com/</a></td>
+            </tr>
+            <tr>
+                <td>Youtube</td>
+                <td><a href="https://www.youtube.com/">https://www.youtube.com/</a></td>
+            </tr>
+            <tr>
+                <td>Sling</td>
+                <td><a href="https://watch.sling.com/browse/my-tv">https://watch.sling.com/browse/my-tv</a></td>
+            </tr>
+            <tr>
+                <td>Hulu</td>
+                <td><a href="https://hulu.com/">https://hulu.com/</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--This is what will be inside the tab2 - I am putting it in a div class to reference in the JavaScirpt code-->
+    <div id="Tab2" class="tabcontent">
+
+        <h2>School Links</h2>
+
+        <table border="5" style="width:100%">
+            <tr>
+                <th>Website:</th>
+                <th>Link:</th>
+            </tr>
+            <tr>
+                <td>Canvas</td>
+                <td><a
+                        href="https://itfederation.jmu.edu/idp/profile/SAML2/Redirect/SSO?execution=e4s1">https://www.canvas.com/</a>
+                </td>
+            </tr>
+            <tr>
+                <td>JMU Email</td>
+                <td><a href="https://outlook.office.com/mail/inbox">dukes.jmu.edu</a></td>
+        </table>
+    </div>
+    
+</body>
+<!--this is the javascript code for the button functionalities on the page related to the tabs-->
+<script>
+    function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</html>
